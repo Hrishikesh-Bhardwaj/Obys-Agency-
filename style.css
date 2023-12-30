@@ -10,6 +10,9 @@ body {
   height: 100%;
   width: 100%;
 }
+body {
+  overflow-x: hidden;
+}
 #loader {
   height: 100%;
   width: 100%;
@@ -127,7 +130,7 @@ body {
   z-index: 999;
 }
 .hero:nth-child(2) {
-  margin-top: 12.5vh;
+  margin-top: 7vh;
 }
 .hero h1 {
   font-size: 7.2vw;
@@ -145,15 +148,133 @@ body {
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
 }
-.hero h2,
-.hero h3 {
+.hero h2 {
   font-size: 7.2vw;
   font-size: 600;
   text-transform: uppercase;
   line-height: 7.2vw;
+  border-bottom: 0.3vw solid #fff;
+  padding-bottom: 0.8vw;
+  /* transition: all ease 0.3s; */
 }
 .hero h2:hover {
   -webkit-text-stroke: 2px #fff;
   color: transparent;
   font-weight: 500;
+  border-bottom: #ffffff00;
+}
+#page2 {
+  height: 100vh;
+  width: 100%;
+  padding-top: 2vh;
+  position: relative;
+  background-color: #151515;
+}
+#video-container {
+  height: 66vh;
+  width: 71vw;
+  position: relative;
+  left: 28%;
+  background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+}
+#video-container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+}
+#video-container video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#video-cursor {
+  background-color: #ffa63d;
+  height: 23vh;
+  width: 12vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -15%;
+  left: 65%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#video-cursor i {
+  font-size: 2vw;
+}
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(32, 28, 28);
+  position: relative;
+}
+#page4 {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: rgb(32, 28, 28); */
+  background-color: black;
+  position: relative;
+  padding-top: 7vh;
+}
+#page4-content {
+  width: 72vw;
+  position: relative;
+  margin-left: 28%;
+}
+#page4-content h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+}
+#page4-content .underline {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  margin: 2.5vw 0;
+}
+#page4-content > p {
+  font-size: 2vw;
+  width: 50%;
+  margin-bottom: 3vw;
+}
+#page4-flex {
+  display: flex;
+}
+#page4-flex img {
+  width: 48%;
+}
+#page4-flex p {
+  font-size: 0.9vw;
+  width: 19%;
+  margin-left: 2vw;
+}
+#page4-blue-div {
+  background-color: #3f7df4;
+  width: 40vw;
+  padding: 4.9vw 4.4vw;
+  position: relative;
+  margin-top: -20vh;
+  margin-left: 24vw;
+}
+.blue-div-elem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* background-color: red; */
+  padding: 1.4vw 0;
+  border-bottom: 0.2vw solid #ffffff5e;
+}
+.blue-div-elem p {
+  width: 50%;
+  font-size: 1.1vw;
+}
+.blue-div-elem h4 {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+#page5 {
+  min-height: 100vh;
+  width: 100%;
 }
