@@ -18,7 +18,7 @@ body {
   width: 100%;
   position: fixed;
   z-index: 999;
-  background-color: #0b0b0b;
+  background-color:  #030303;
   padding: 20vh 10vw;
 }
 .line {
@@ -95,12 +95,14 @@ body {
 
 #main {
   position: relative;
-  background-color: #030303;
+  background-color:  #151515;
 }
 #page1 {
   height: 100vh;
   width: 100%;
-  background-color: #151515;
+  /* background-color: #151515; */
+  position: relative;
+  z-index: 100;
 }
 #page1 #nav {
   display: flex;
@@ -120,24 +122,35 @@ body {
 }
 .hero {
   /* background-color: red; */
-  width: 72%;
+  width: 74%;
   margin-left: 27%;
   height: fit-content;
-  overflow: hidden;
+  overflow-y: hidden;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 999;
 }
+
 .hero:nth-child(2) {
-  margin-top: 7vh;
+  margin-top: 18vh;
 }
 .hero h1 {
-  font-size: 7.2vw;
-  font-size: 600;
+  font-size: 7vw;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 7.2vw;
+  position: relative;
 }
+#hero1::before {
+  content: "01";
+  position: absolute;
+  left: 19%;
+  top: 37%;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "silk serif";
+  z-index: 9999;
+}
+
 #crsr {
   height: 2.7vw;
   width: 2.7vw;
@@ -150,32 +163,34 @@ body {
 }
 .hero h2 {
   font-size: 7.2vw;
-  font-size: 600;
+  font-weight: 600;
   text-transform: uppercase;
   line-height: 7.2vw;
   border-bottom: 0.3vw solid #fff;
-  padding-bottom: 0.8vw;
-  /* transition: all ease 0.3s; */
+  /* padding-bottom: 0.8vw; */
+  /* transition: all 0.3s ease; */
 }
 .hero h2:hover {
   -webkit-text-stroke: 2px #fff;
   color: transparent;
   font-weight: 500;
-  border-bottom: #ffffff00;
+  border-bottom: 0.5vw solid #ffffff00;
 }
 #page2 {
   height: 100vh;
   width: 100%;
-  padding-top: 2vh;
+  padding-top: 15vh;
   position: relative;
-  background-color: #151515;
 }
 #video-container {
+  /* background-color: red; */
   height: 66vh;
   width: 71vw;
   position: relative;
   left: 28%;
   background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+  background-position: center;
+  background-size: cover;
 }
 #video-container img {
   position: absolute;
@@ -188,16 +203,17 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  opacity: 0;
 }
 #video-cursor {
   background-color: #ffa63d;
-  height: 23vh;
-  width: 12vw;
+  height: 17vh;
+  width: 9vw;
   border-radius: 50%;
   position: absolute;
   top: -15%;
-  left: 65%;
-  z-index: 9999;
+  left: 70%;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,7 +231,7 @@ body {
   min-height: 100vh;
   width: 100%;
   /* background-color: rgb(32, 28, 28); */
-  background-color: black;
+  /* background-color: black; */
   position: relative;
   padding-top: 7vh;
 }
@@ -224,9 +240,20 @@ body {
   position: relative;
   margin-left: 28%;
 }
+
 #page4-content h1 {
   font-size: 7vw;
   text-transform: uppercase;
+  position: relative;
+}
+#page4-content h1::before {
+  content: "03";
+  position: absolute;
+  left: -10%;
+  top: 10%;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "silk serif";
 }
 #page4-content .underline {
   height: 1px;
@@ -277,4 +304,121 @@ body {
 #page5 {
   min-height: 100vh;
   width: 100%;
+  position: relative;
+}
+.elem {
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin: -2vw;
+}
+.elem h1 {
+  /* background-color: red; */
+
+  font-size: 7vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: anime1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes anime1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+.elem2 {
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: -2vw;
+}
+.elem2 h1 {
+  /* background-color: red; */
+
+  font-size: 7vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  transform: translateX(calc(-100% - 20px));
+  animation-name: anime1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+.elem span {
+  font-style: italic;
+  font-family: "silk serif";
+  color: transparent;
+}
+.elem2 span {
+  font-style: italic;
+  font-family: "silk serif";
+  color: transparent;
+}
+#footer {
+  height: 80vh;
+  width: 100%;
+  /* background-color: red; */
+  position: relative;
+  margin-top: 2vw;
+  padding-left: 30vw;
+  padding-right: 4vw;
+}
+#footer h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  position: relative;
+  /* background-color: blue; */
+}
+#footer h1::before {
+  content: "04";
+  position: absolute;
+  left: -10%;
+  top: 10%;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "silk serif";
+}
+.underline {
+  height: 1.2px;
+  width: 100%;
+  background-color: #ffffffc7;
+  margin: 3vw 0;
+}
+#footer-div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 15vw;
+  padding-top: 0.5vw;
+}
+#footer-div h6 {
+  font-size: 1.2vw;
+  margin-bottom: 1.5vw;
+  font-weight: 500;
+}
+.box {
+  width: 20%;
+}
+
+#footer-div h5 {
+  font-size: 1.6vw;
+  font-weight: 600;
+  margin: 0.3vh 0;
+}
+#footer > h5 {
+  font-size: 1vw;
+  font-weight: 500;
+  position: relative;
+  bottom: 1.5vw;
 }
