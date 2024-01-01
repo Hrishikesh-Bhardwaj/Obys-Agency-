@@ -18,7 +18,7 @@ body {
   width: 100%;
   position: fixed;
   z-index: 999;
-  background-color:  #030303;
+  background-color: #030303;
   padding: 20vh 10vw;
 }
 .line {
@@ -95,7 +95,13 @@ body {
 
 #main {
   position: relative;
-  background-color:  #151515;
+  background-color: #151515;
+}
+.mousefollower {
+  border: 2px solid #fff;
+  background-color: rgb(255, 255, 255);
+  scale: 2;
+  mix-blend-mode: difference;
 }
 #page1 {
   height: 100vh;
@@ -207,7 +213,7 @@ body {
 }
 #video-cursor {
   background-color: #ffa63d;
-  height: 17vh;
+  height: 9vw;
   width: 9vw;
   border-radius: 50%;
   position: absolute;
@@ -224,8 +230,128 @@ body {
 #page3 {
   min-height: 100vh;
   width: 100%;
-  background-color: rgb(32, 28, 28);
+  /* background-color: rgb(61, 61, 61); */
   position: relative;
+  padding: 17vh 2vw;
+}
+#page3 h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 25vw;
+}
+#page3 h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3vw;
+  font-weight: 100;
+  font-family: "silk serif";
+  left: -12%;
+  top: 8%;
+}
+#page3 .underline {
+  margin-left: 25vw;
+  margin-bottom: 10vw;
+}
+#img-div-container {
+  /* background-color: red; */
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3vw;
+  flex-wrap: wrap;
+  padding-left: 2.5vw;
+}
+.img-div {
+  height: 80vh;
+  width: 30vw;
+  /* background-color: blue; */
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.img-div:nth-child(1) {
+  height: 60vh;
+  width: 25vw;
+}
+.img-div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.page3-circle1 {
+  height: 25vw;
+  width: 25vw;
+  border: 2px solid #ffffff86;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5vw;
+  margin-top: 38vh;
+  position: relative;
+}
+.page3-circle1 svg {
+  height: 40%;
+}
+.page3-circle2 {
+  height: 25vw;
+  width: 25vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2vw;
+  margin-top: -5vw;
+  gap: 5vw;
+  position: relative;
+}
+.page3-circle2 svg {
+  height: 40%;
+  rotate: -45deg;
+}
+.circle-in {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+}
+.circle-in p {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #000;
+  width: 80%;
+  scale: 0;
+  transition: all ease 0.5s;
+  transition-delay: 0.3s;
+  opacity: 0;
+}
+.page3-circle1:hover .circle-in {
+  scale: 1;
+}
+.page3-circle1:hover .circle-in p {
+  scale: 1;
+  opacity: 1;
+}
+.page3-circle2:hover .circle-in {
+  scale: 1;
+}
+.page3-circle2:hover .circle-in p {
+  scale: 1;
+  opacity: 1;
 }
 #page4 {
   min-height: 100vh;
@@ -421,4 +547,21 @@ body {
   font-weight: 500;
   position: relative;
   bottom: 1.5vw;
+}
+._canvas_container {
+  z-index: 99999 !important;
+  pointer-events: none;
+}
+#flag {
+  height: 25vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+#hero3 {
+  /* background-color: red; */
+  z-index: 999;
+  position: relative;
 }
