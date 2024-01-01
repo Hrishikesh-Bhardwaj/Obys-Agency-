@@ -1,4 +1,4 @@
-# Obeys Agency Clone
+# Obys Agency Clone
 
 A front-end development project that serves as a clone of the Obeys Agency website. 
 The project is built using HTML, CSS, JavaScript, and incorporates animation libraries like GSAP and Locomotive.
